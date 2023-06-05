@@ -64,14 +64,19 @@ with open(csvpath, encoding='UTF-8') as csvfile:
 # Write to file
 output_path = Path("analysis/Budget_Analysis.txt")
 with open(output_path, 'w') as file:
+    file.write("Financial Analysis")
     file.write("\n")
-    file.write("Financial Analysis" + "\n")
-    file.write("----------------------------" + "\n")
-    file.write(f"Total Months: {len(month_list)}" + "\n")
-    file.write(f"Total: ${profit_total}" + "\n")
-    file.write(f"Average Change: ${profit_change_average}" + "\n")
-    file.write(f"Greatest Increase in Profits: {max_month} (${max_increase})" + "\n")
-    file.write(f"Greatest Decrease in Profits: {min_month} (${min_increase})" + "\n")
+    file.write("----------------------------")
+    file.write("\n")
+    file.write(f"Total Months: {len(month_list)}")
+    file.write("\n")
+    file.write(f"Total: ${profit_total}")
+    file.write("\n")
+    file.write(f"Average Change: ${profit_change_average}")
+    file.write("\n")
+    file.write(f"Greatest Increase in Profits: {max_month} (${max_increase})")
+    file.write("\n")
+    file.write(f"Greatest Decrease in Profits: {min_month} (${min_increase})")
 
     file.close
 
